@@ -68,7 +68,7 @@ class StringOperation:
         """
         
         stemmer = PorterStemmer()
-        tokenizer = word_tokenize()
+        tokenizer = word_tokenize
         
         series_text_output = series_text.apply(lambda x: ' '.join([stemmer.stem(word) for word in tokenizer(x)]))
         
@@ -76,8 +76,8 @@ class StringOperation:
     
     
     
-    def translate_id_to_en(series_text,
-                          src_lang='id', dest_lang='en'):    
+    def word_translation(series_text,
+                        src_lang='id', dest_lang='en'):    
         """
         get translate into specific language
         
@@ -85,8 +85,10 @@ class StringOperation:
         ----------
         seriest_text : Series
             text input with series dtype
-        trasnlator : function
-            text input with series dtype
+        src_lang : text
+            source language code
+        dest_lang : text
+            destination language code
 
         return
         ------

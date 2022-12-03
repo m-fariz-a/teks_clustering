@@ -1,2 +1,0 @@
-- tujuan : melakukan teks clustering
-- data diambil dari scrapping google search
